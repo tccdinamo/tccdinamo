@@ -5,10 +5,10 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+    color: #333; /* Cinza escuro para inteligência */
+    background-color: #f4f4f4; /* Cinza claro para limpeza */
 }
 
 .container {
@@ -18,18 +18,20 @@ body {
 }
 
 header {
-    background: #007bff;
+    background: linear-gradient(to right, #007bff, #0056b3); /* Azul para confiança e segurança */
     color: white;
     padding: 1rem 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra para segurança visual */
 }
 
 .logo {
     float: left;
     font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .nav-links {
@@ -45,10 +47,11 @@ header {
 .nav-links a {
     color: white;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: #28a745;
+    color: #28a745; /* Verde para resultados positivos */
 }
 
 .hamburger {
@@ -65,15 +68,17 @@ header {
 }
 
 .hero {
-    background: #007bff;
+    background: linear-gradient(to right, #007bff, #0056b3); /* Azul para confiança */
     color: white;
     text-align: center;
     padding: 100px 20px 50px;
+    position: relative;
 }
 
 .hero h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
 .hero p {
@@ -86,18 +91,23 @@ header {
     max-width: 600px;
     height: auto;
     margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Sombra para segurança */
 }
 
 .btn {
-    background-color: #28a745;
+    background-color: #28a745; /* Verde para resultados positivos */
     color: white;
-    padding: 10px 20px;
+    padding: 12px 25px;
     text-decoration: none;
     border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
 }
 
 .btn:hover {
     background-color: #218838;
+    transform: scale(1.05); /* Efeito para inteligência */
 }
 
 section {
@@ -107,12 +117,15 @@ section {
 .about, .services, .testimonials, .contact {
     background-color: white;
     margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Sombra para confiança */
 }
 
 .about-img {
     max-width: 100%;
     height: auto;
     margin-top: 20px;
+    border-radius: 10px;
 }
 
 .service-grid {
@@ -124,15 +137,46 @@ section {
 .service {
     padding: 20px;
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: 10px;
     text-align: center;
+    background: #f9f9f9; /* Cinza leve para inteligência */
+    transition: transform 0.3s;
+}
+
+.service:hover {
+    transform: translateY(-5px); /* Efeito para resultados positivos */
+}
+
+.service i {
+    font-size: 2rem;
+    color: #007bff; /* Azul para confiança */
+    margin-bottom: 10px;
+}
+
+.testimonials {
+    background: linear-gradient(to right, #f4f4f4, #e9ecef); /* Cinza para limpeza */
 }
 
 .testimonial {
     margin: 20px 0;
     padding: 20px;
-    background-color: #f9f9f9;
-    border-left: 5px solid #007bff;
+    background-color: white;
+    border-left: 5px solid #28a745; /* Verde para resultados */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.testimonial cite {
+    font-style: italic;
+    color: #007bff; /* Azul para confiança */
 }
 
 form {
@@ -142,17 +186,37 @@ form {
 
 input, textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin: 10px 0;
-    border: 1px solid #ddd;
+    border: 2px solid #ddd;
     border-radius: 5px;
+    font-size: 1rem;
+}
+
+input:focus, textarea:focus {
+    border-color: #007bff; /* Azul para foco */
 }
 
 footer {
-    background-color: #333;
+    background-color: #333; /* Cinza escuro para inteligência */
     color: white;
     text-align: center;
     padding: 20px 0;
+}
+
+.whatsapp-btn {
+    display: inline-block;
+    margin-top: 10px;
+    background: #25d366; /* Verde WhatsApp */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.whatsapp-btn:hover {
+    background: #128c7e;
 }
 
 @media (max-width: 768px) {
@@ -174,5 +238,9 @@ footer {
     }
     .hero h2 {
         font-size: 2rem;
+    }
+    .testimonial {
+        flex-direction: column;
+        text-align: center;
     }
 }
